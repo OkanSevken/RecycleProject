@@ -1,0 +1,33 @@
+﻿@model EntityLayer.Concrete.Article
+@{
+    ViewBag.Title = "AddArticle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+
+<h1>Yeni Nesne Ekleme Sayfası</h1>
+
+
+@using (Html.BeginForm("AddArticle", "Article", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Nesne Adı")
+        @Html.TextBoxFor(x => x.ArticleName,new {@class="form-control" })
+        @Html.ValidationMessageFor(x => x.ArticleName)
+        <br /> <br />
+        @Html.Label("Nesne Miktarı Giriniz")
+        @Html.TextBoxFor(x => x.ArticleQuantity, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.ArticleQuantity)
+        <br /> <br />
+        @Html.Label("Karbon Miktarı Giriniz")   
+        @Html.TextBoxFor(x => x.Carbon, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Carbon)
+        <br /> <br />
+        @Html.Label("Geri Dönüşüm Türünü Giriniz")
+        @Html.TextBoxFor(x => x.RecyclType, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.RecyclType)
+        <br /> <br />
+        <button id="Kaydet2" class="btn btn-info">Kaydet</button>
+    </div>
+}
+

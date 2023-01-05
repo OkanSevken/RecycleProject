@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Register/register.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="logo">
+        <a href="anasayfa.html">
+            <img src="/resimler/logo 1.png" alt="">
+        </a>
+    </div>
+    <div class="content">
+        <div class="content-left">
+            <img src="/resimler/kadın.png" height="750" alt="">
+        </div>
+        <div class="content-right">
+            <p class="hesap">
+                Hesabın var mı?
+                <a href="/Account/Login">Giriş Yap</a>
+            </p>
+
+            <form action method="post">
+                <p class="a">Haydi Seni Kaydedelim</p>
+                <p class="b">Ve Bu Oldukça Basit</p>
+                <div class="icon2">
+                    <a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-iconname></ion-icon></a>
+                    <a href="https://www.google.com/"><ion-icon name="logo-google"></ion-iconname></ion-icon></a>
+                </div>
+                
+                    <div class="form-container">
+                        <input type="name" name="UserName" required placeholder="İsim">
+                        <input type="email" name="UserMail" required placeholder="E-mail">
+                        <input type="name" name="UserAdress" required placeholder="Adres">
+                        <input type="password" name="UserPassword" required placeholder="Şifre">
+                        <input type="submit" name="submit" value="Hesap Oluştur" class="form-btn">
+                    </div>
+                
+            </form>
+        </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿@model EntityLayer.Concrete.Article
+@{
+    ViewBag.Title = "EditArticle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Nesne Güncelleme Sayfası</h2>
+
+@using (Html.BeginForm("EditArticle", "Article", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Nesne ID")
+        @Html.TextBoxFor(x => x.ArticleID, new { @class = "form-control" })
+        <br />
+        @Html.Label("Nesne Adı")
+        @Html.TextBoxFor(x => x.ArticleName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Nesne Miktarı")
+        @Html.TextBoxFor(x => x.ArticleQuantity, new { @class = "form-control" })
+        <br />
+        @Html.Label("Karbon Miktarı")
+        @Html.TextBoxFor(x => x.Carbon, new { @class = "form-control" })
+        <br />
+        @Html.Label("Geri Dönüşüm Türü")
+        @Html.TextBoxFor(x => x.RecyclType, new { @class = "form-control" })
+        <br />
+        <button id="Guncelle" class="btn btn-success">Güncelle</button>
+    </div>
+}

@@ -1,0 +1,41 @@
+﻿@model EntityLayer.Concrete.TransferCarbon
+@{
+    ViewBag.Title = "Transfer";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Carbon Transfer Sayfası</h1>
+@if (ViewBag.valid == "false")
+{
+    <div class="alert alert-danger">
+        <p>Hesabınızda Yeterli Carbon Yok</p>
+    </div>
+}
+
+@if (ViewBag.haveUser
+ == "false")
+{
+    <div class="alert alert-danger">
+        <p>Böyle bir kullanıcı bulunmamaktadır.</p>
+    </div>
+}
+
+@using (Html.BeginForm("Transfer", "User", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.Label("Gönderici Adres")
+        @Html.TextBoxFor(x => x.SenderUser, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.SenderUser)
+        <br /> <br />
+        @Html.Label("Alıcı Adres")
+        @Html.TextBoxFor(x => x.ReceiverUser, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.ReceiverUser)
+        <br /> <br />
+        @Html.Label("Miktar")
+        @Html.TextBoxFor(x => x.Amount, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Amount)
+        <br /> <br />
+        <button id="Gonder" class="btn btn-info">Gönder</button>
+    </div>
+}
+
