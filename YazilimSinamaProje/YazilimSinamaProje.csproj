@@ -1998,6 +1998,7 @@
     <Content Include="login\login.css" />
     <Content Include="login\login.html" />
     <Content Include="okan1.jpeg" />
+    <Content Include="okan2.jpeg" />
     <Content Include="Register\register.css" />
     <Content Include="Register\register.html" />
     <Content Include="Register\resimler\answer logo.png" />
